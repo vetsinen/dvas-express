@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+<head>
+    <title>DVAS dashboard</title>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+</head>
+<body>
+<h1>events</h1>
+
+<% Object.keys(events).forEach(function(key) { %>
+    <p>
+        <span><%= events[key].event_timestamp %></span>
+        <span><%= events[key].vehicle.vehicle_guid %></span>
+    </p>
+<% }); %>
+
+</body>
 </html>
